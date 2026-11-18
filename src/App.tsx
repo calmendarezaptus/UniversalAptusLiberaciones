@@ -25,6 +25,7 @@ import {
   fetchDisponible, fetchPendientes, formatMoney, KIND_LABEL, KIND_PLURAL, KINDS, liberar, monthRange, moneyText, preview,
   type Disponible, type Kind, type Pendiente,
 } from '@/lib/liberaciones'
+import { MenuButton } from '@/components/MenuButton'
 
 type Modal = { isOpen: boolean; type: StatusModalType; title: string; message: string }
 type Loadable<T> = { rows: T[]; loading: boolean; error: string }
@@ -199,6 +200,7 @@ function App() {
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl font-bold text-slate-900 tracking-tight">Liberaciones</h1>
                 <ThemeMenu theme={theme} setTheme={setTheme} />
+                <MenuButton />
               </div>
               <p className="text-slate-500 text-sm mt-0.5">Marca lo capturado como listo para entrar a una Prebill</p>
             </div>
